@@ -64,7 +64,7 @@
           <li>
             <a href="/service/astrology/" class="navbar-link" data-nav-link>Astrology</a>
           </li>
-          
+
 
           <li>
             <a href="/event-contact/" class="btn btn-primary">Contact Us</a>
@@ -104,97 +104,151 @@
 
       <section class="about-us-section" id="about-us">
         <div class="heading-wrapper">
-            <h1 class="about-us-heading">FASHION</h1>
+          <h1 class="about-us-heading">GALLERY</h1>
         </div>
-    </section>
+      </section>
 
-    <section class="culture-section">
-      <div class="content">
-        <p class="label">LYFT CULTURE</p>
-        <h1 class="title">Let's grow together</h1>
-        <p class="description">
-          Amazing companies start with amazing people. We’re creating a diverse team of smart,
-          passionate people who feel comfortable being themselves, and are motivated by our shared
-          goal — improving people’s lives with the world’s best transportation.
-        </p>
-      </div>
-      <div class="image-container">
-        <img src="/assets/images/fashion.jpg" alt="Building illustration">
-      </div>
-    </section>
-
-    <div class="product-grid">
-        <!-- Product 1 -->
-        <div class="product-card">
-            <div class="badge">Sale</div>
-            <img src="/assets/images/product1.webp" alt="Charcoal Checkered Radiance Dress">
-            <div class="product-name">Charcoal Checkered Radiance Dress</div>
-            <div>
-                <span class="price">Rs. 2,200.00</span>
-                <span class="sale-price">Rs. 1,900.00</span>
-            </div>
-            <a href="#" class="explore-button">Explore</a>
+      <!-- <section class="culture-section">
+        <div class="content">
+          <p class="label">LYFT CULTURE</p>
+          <h1 class="title">Let's grow together</h1>
+          <p class="description">
+            Amazing companies start with amazing people. We’re creating a diverse team of smart,
+            passionate people who feel comfortable being themselves, and are motivated by our shared
+            goal — improving people’s lives with the world’s best transportation.
+          </p>
         </div>
-
-        <!-- Product 2 -->
-        <div class="product-card">
-            <div class="badge">Sale</div>
-            <img src="/assets/images/product2.webp" alt="Earthly Elegance Mirrorwork Dress">
-            <div class="product-name">Earthly Elegance Mirrorwork Dress</div>
-            <div>
-                <span class="price">Rs. 2,700.00</span>
-                <span class="sale-price">Rs. 2,399.00</span>
-            </div>
-            <a href="#" class="explore-button">Explore</a>
+        <div class="image-container">
+          <img src="/assets/images/fashion.jpg" alt="Building illustration">
         </div>
+      </section> -->
+<style>
+      .gallery-section {
+  padding: 40px 15px;
+  text-align: center;
+}
 
-        <!-- Product 3 -->
-        <div class="product-card">
-            <div class="badge">Sale</div>
-            <img src="/assets/images/product3.webp" alt="Starry Sky Pintuck High Neck Kurti">
-            <div class="product-name">Starry Sky Pintuck High Neck Kurti</div>
-            <div>
-                <span class="price">Rs. 2,700.00</span>
-                <span class="sale-price">Rs. 2,366.00</span>
-            </div>
-            <a href="#" class="explore-button">Explore</a>
-        </div>
+.gallery-section h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
 
-        <!-- Product 4 -->
-        <div class="product-card">
-            <img src="/assets/images/product4.webp" alt="Rani-Rose High Low Creation">
-            <div class="product-name">Rani-Rose High Low Creation</div>
-            <div>
-                <span class="sale-price">Rs. 2,499.00</span>
-            </div>
-            <a href="#" class="explore-button">Explore</a>
-        </div>
+/* Responsive Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-        <!-- Product 5 -->
-        <div class="product-card">
-            <div class="badge">Sale</div>
-            <img src="/assets/images/product5.webp" alt="Sunburst Chain Stitch Dress">
-            <div class="product-name">Sunburst Chain Stitch Dress</div>
-            <div>
-                <span class="price">Rs. 2,700.00</span>
-                <span class="sale-price">Rs. 2,199.00</span>
-            </div>
-            <a href="#" class="explore-button">Explore</a>
-        </div>
+/* Gallery Images */
+.gallery-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
 
-        <!-- Product 6 -->
-        <div class="product-card">
-            <img src="/assets/images/product6.webp" alt="Ivy Stripes Mirror Dress">
-            <div class="product-name">Ivy Stripes Mirror Dress</div>
-            <div>
-                <span class="sale-price">Rs. 2,169.00</span>
-            </div>
-            <a href="#" class="explore-button">Explore</a>
-        </div>
-    </div>
-    
+.gallery-img:hover {
+  transform: scale(1.04);
+}
 
-      
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 8px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Text */
+@media (max-width: 768px) {
+  .gallery-section h2 {
+    font-size: 22px;
+  }
+}
+
+</style>
+
+
+<section class="gallery-section">
+  <h2>Our Gallery</h2>
+
+  <div class="gallery-grid">
+    <img src="/assets/images/about1.jpg" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+    <img src="/assets/images/about1.jpg"" class="gallery-img">
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <span class="close-btn">&times;</span>
+  <img id="lightbox-img">
+</div>
+
+<script>
+const images = document.querySelectorAll(".gallery-img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+  });
+});
+
+document.querySelector(".close-btn").onclick = () => {
+  lightbox.style.display = "none";
+};
+
+lightbox.onclick = e => {
+  if (e.target !== lightboxImg) {
+    lightbox.style.display = "none";
+  }
+};
+</script>
 
     </article>
   </main>
